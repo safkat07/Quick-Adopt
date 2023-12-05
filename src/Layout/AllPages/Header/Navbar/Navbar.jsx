@@ -1,11 +1,10 @@
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../../../assets/logo-removebg-preview.png'
 import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
     return (
-        <div className=''>
-            <div className='flex  shadow-2xl px-5  pb-5 lg:flex-row flex-col justify-between   items-center'>
+        <div className='bg-[#EBF1EE]'>
+            <div className='flex  shadow-2xl px-5  h-20 lg:flex-row flex-col justify-between   items-center'>
                 <div className='flex  items-center'>
                     <a className='no-underline text-black' href="#">
                         <span className='text-3xl font-lobster tracking-[.4rem]'>QuickAdopt</span>
