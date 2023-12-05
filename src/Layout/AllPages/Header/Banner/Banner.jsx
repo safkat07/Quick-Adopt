@@ -31,7 +31,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div>
-                    <img src={banner} alt="" />
+                    <img className='transition-all duration-1000 hover:px-5 ' src={banner} alt="" />
                 </div>
             </div>
             {/* <div className='text-center max-w-5xl mx-auto mt2 text-3xl'>

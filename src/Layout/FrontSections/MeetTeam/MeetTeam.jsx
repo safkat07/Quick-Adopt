@@ -9,17 +9,17 @@ const MeetTeam = () => {
             <p className='text-center font-medium text-7xl font-maven'>Meet The Team</p>
             <div className='grid  pt-10 grid-cols-3 justify-center items-center'>
                 <div className='text-center'>
-                    <img src={img1} alt="" />
+                    <img className='transition-all duration-1000 hover:p-5 ' src={img1} alt="" />
                     <p className='text-xl mt-3 font-monster'>Jimena Ulloa</p>
                     <p className='font-maven'>Chief Marketing Officer</p>
                 </div>
                 <div className='text-center'>
-                    <img src={img2} alt="" />
+                    <img className='transition-all duration-1000 hover:p-5 ' src={img2} alt="" />
                     <p className='text-xl mt-3 font-monster'>Stephanie Cobelo</p>
                     <p className='font-maven'>Chief Communications  Officer</p>
                 </div>
                 <div className='text-center'>
-                    <img src={img3} alt="" />
+                    <img className='transition-all duration-1000 hover:p-5 ' src={img3} alt="" />
                     <p className='text-xl mt-3 font-monster'>Shemanna McLawrence</p>
                     <p className='font-maven'>Chief Financial  Officer</p>
                 </div>

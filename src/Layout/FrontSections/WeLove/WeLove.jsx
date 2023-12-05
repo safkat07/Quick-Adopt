@@ -8,7 +8,7 @@ const WeLove = () => {
             <MainContainer>
                 <div className='flex justify-center items-center w-fit '>
                     <div className='w-1/2'>
-                        <img className='w-[85%] mx-auto' src={img} alt="" />
+                        <img className='w-[85%] transition-all hover:p-10 duration-1000 mx-auto' src={img} alt="" />
                     </div>
                     <div className='w-1/2'>
                         <h2 className='font-lobster text-6xl'> QuickAdopt</h2>

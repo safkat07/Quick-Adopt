@@ -10,7 +10,7 @@ const FindPuppy = () => {
             <p className='text-6xl font-semibold text-center  text-[#737373] max-w-xl mx-auto'>Find Trusted Pet Care
                 In 3 Easy Steps</p>
             <div className='flex flex-col md:flex-row items-center justify-center gap-x-7'>
-                <div className='bg-[#EBF1EE] w-96 h-[480px] rounded-3xl'>
+                <div className='bg-[#EBF1EE] hover:p-10 transition-all duration-700   w-96 h-[480px] rounded-3xl'>
                     <div className='flex relative justify-center  items-center'>
                         <img className='absolute top-28' src={img1} alt="" />
 
@@ -23,7 +23,7 @@ const FindPuppy = () => {
                 <div>
                     <img src={arrow} alt="" />
                 </div>
-                <div className='bg-[#EBF1EE] mt-40 w-96 h-[480px] rounded-3xl'>
+                <div className='bg-[#EBF1EE] hover:p-10 transition-all duration-700 mt-40 w-96 h-[480px] rounded-3xl'>
                     <div className='flex relative justify-center  items-center'>
                         <img className='absolute top-28' src={img2} alt="" />
                     </div>
@@ -35,7 +35,7 @@ const FindPuppy = () => {
                 <div className='mb-40'>
                     <img src={arrow} alt="" />
                 </div>
-                <div className='bg-[#EBF1EE] w-96 h-[480px] rounded-3xl'>
+                <div className='bg-[#EBF1EE]  hover:p-10 transition-all duration-700 w-96 h-[480px] rounded-3xl'>
                     <div className='flex relative justify-center  items-center'>
                         <img className='absolute top-28' src={img3} alt="" />
 
