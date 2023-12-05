@@ -8,6 +8,7 @@ import Services from "../../FrontSections/Services/Services";
 import WeLove from "../../FrontSections/WeLove/WeLove";
 import WhyUs from "../../FrontSections/WhyUs/WhyUs";
 import Banner from "../Header/Banner/Banner";
+import CatsDogs from "../../FrontSections/CatsDogs/CatsDogs";
 
 const Home = () => {
     return (
@@ -19,11 +20,12 @@ const Home = () => {
             <Banner></Banner>
             <FindPuppy></FindPuppy>
             <WeLove></WeLove>
+            <CatsDogs></CatsDogs>
             <PetCategory></PetCategory>
             <WhyUs></WhyUs>
-            <OurBLog></OurBLog>
+            {/* <OurBLog></OurBLog> */}
             <MeetTeam></MeetTeam>
-            <FAQsection></FAQsection>
+            {/* <FAQsection></FAQsection> */}
             <Services></Services>
         </div>
         </HelmetProvider>
