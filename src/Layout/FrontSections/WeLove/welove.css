@@ -1,0 +1,5 @@
+.bg{
+    background-image: url(../../../../src/assets/third-sec-lines-img.png);
+    object-fit: contain;
+    overflow: hidden;
+}
