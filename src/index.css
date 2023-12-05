@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Maven+Pro:wght@400;500;600&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap')
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
