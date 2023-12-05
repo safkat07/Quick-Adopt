@@ -10,5 +10,5 @@ export default {
       monster: ["Montserrat", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
