@@ -4,6 +4,7 @@ import {
 import MainLayout from "../Layout/MainLayout/MainLayout";
 import ErrorPage from "../Layout/ErrorPage/ErrorPage";
 import Home from "../Layout/AllPages/Home/Home";
+import SeeAllPets from "../Layout/FrontSections/PetCategory/SeeAllPets/SeeAllPets";
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+          path: '/seeallpets',
+          element: <SeeAllPets></SeeAllPets>
         }
       ]
     },
