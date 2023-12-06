@@ -5,6 +5,7 @@ import MainLayout from "../Layout/MainLayout/MainLayout";
 import ErrorPage from "../Layout/ErrorPage/ErrorPage";
 import Home from "../Layout/AllPages/Home/Home";
 import SeeAllPets from "../Layout/FrontSections/PetCategory/SeeAllPets/SeeAllPets";
+import SinglePetCategory from "../Layout/FrontSections/PetCategory/SinglePetCategory/SinglePetCategory";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
         {
           path: '/seeallpets',
           element: <SeeAllPets></SeeAllPets>
+        },
+        {
+          path: '/singlepetcategory/:id',
+          element: <SinglePetCategory></SinglePetCategory>,
+          loader: ({params}) => fetch(`http://localhost:5000/api/v1/allpetcategory/${params.id}`)
         }
       ]
     },
