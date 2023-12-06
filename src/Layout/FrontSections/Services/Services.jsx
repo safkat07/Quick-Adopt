@@ -8,7 +8,7 @@ const Services = () => {
     return (
         <MainContainer>
             <div className='flex justify-between flex-wrap  '>
-                <div className='bg-[#EBF1EE] hover:p-10 transition-all duration-700 rounded-2xl flex justify-center items-center w-96 h-96'>
+                <div className='bg-[#EBF1EE] hover:p-5 transition-all duration-700 rounded-2xl flex justify-center items-center w-96 h-96'>
                     <div>
                         <div className='text-center text-3xl'>
                             <FaVanShuttle ></FaVanShuttle>
@@ -17,7 +17,7 @@ const Services = () => {
                         <p className='text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
                     </div>
                 </div>
-                <div className='bg-[#EBF1EE] hover:p-10 transition-all duration-700 flex rounded-2xl justify-center items-center w-96 h-96'>
+                <div className='bg-[#EBF1EE] hover:p-5 transition-all duration-700 flex rounded-2xl justify-center items-center w-96 h-96'>
                     <div>
                         <div className='text-center text-3xl'>
                             <FaUserDoctor ></FaUserDoctor>
@@ -26,7 +26,7 @@ const Services = () => {
                         <p className='text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
                     </div>
                 </div>
-                <div className='bg-[#EBF1EE] hover:p-10 transition-all duration-700  rounded-2xl flex justify-center items-center w-96 h-96'>
+                <div className='bg-[#EBF1EE] hover:p-5 transition-all duration-700  rounded-2xl flex justify-center items-center w-96 h-96'>
                     <div>
                         <div className='text-center text-3xl'>
                             <MdOutlinePets ></MdOutlinePets>
