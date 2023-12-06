@@ -9,25 +9,29 @@ import WeLove from "../../FrontSections/WeLove/WeLove";
 import WhyUs from "../../FrontSections/WhyUs/WhyUs";
 import Banner from "../Header/Banner/Banner";
 import CatsDogs from "../../FrontSections/CatsDogs/CatsDogs";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const Home = () => {
+
     return (
         <HelmetProvider>
-        <div>
-            <Helmet>
-                <title>Quick Adopt | Home</title>
-            </Helmet>
-            <Banner></Banner>
-            <FindPuppy></FindPuppy>
-            <WeLove></WeLove>
-            <CatsDogs></CatsDogs>
-            <PetCategory></PetCategory>
-            <WhyUs></WhyUs>
-            {/* <OurBLog></OurBLog> */}
-            <MeetTeam></MeetTeam>
-            {/* <FAQsection></FAQsection> */}
-            <Services></Services>
-        </div>
+            <div >
+
+                <Helmet>
+                    <title>Quick Adopt | Home</title>
+                </Helmet>
+                <Banner></Banner>
+                <FindPuppy></FindPuppy>
+                <WeLove></WeLove>
+                <CatsDogs></CatsDogs>
+                <PetCategory></PetCategory>
+                <WhyUs></WhyUs>
+                {/* <OurBLog></OurBLog> */}
+                <MeetTeam></MeetTeam>
+                {/* <FAQsection></FAQsection> */}
+                <Services></Services>
+            </div>
         </HelmetProvider>
     );
 };

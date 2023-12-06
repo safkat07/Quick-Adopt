@@ -10,6 +10,7 @@ const Banner = () => {
 
     return (
         <div className='bg-[#EBF1EE] px-20 min-h-screen'>
+            
             <div className='flex md:flex-row flex-col space-x-20   text-left items-center'>
                 <div className='flex flex-col  items-start'>
                     <div className=''>

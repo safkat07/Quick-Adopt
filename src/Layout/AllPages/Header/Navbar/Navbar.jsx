@@ -8,7 +8,7 @@ const Navbar = () => {
                 <div className='flex  shadow-2xl px-5  h-28 lg:flex-row flex-col justify-between   items-center'>
                     <div className='flex  items-center'>
                         <a className='no-underline text-black' href="#">
-                            <span className='text-4xl font-bold font-lobster tracking-[.4rem]'>QuickAdopt</span>
+                            <span className='text-4xl font-bold font-lobster transition-all duration-700 hover:tracking-[.3em] tracking-[.4rem]'>QuickAdopt</span>
                         </a>
                     </div>
                     <div>

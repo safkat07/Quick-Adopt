@@ -4,13 +4,16 @@ import img1 from '../../../assets/card-one-img.png'
 import img2 from '../../../assets/card-two-img.png'
 import img3 from '../../../assets/Frame-10.png'
 import arrow from '../../../assets/easy-step-arrow.svg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const FindPuppy = () => {
     return (
-        <MainContainer>
+        <MainContainer >
             <p className='text-6xl font-semibold text-center  text-[#737373] max-w-xl mx-auto'>Find Trusted Pet Care
                 In 3 Easy Steps</p>
             <div className='flex flex-col md:flex-row items-center justify-center gap-x-7'>
-                <div className='bg-[#EBF1EE] hover:p-10 transition-all duration-700   w-96 h-[480px] rounded-3xl'>
+                <div  className='bg-[#EBF1EE]  hover:p-10 transition-all duration-700   w-96 h-[480px] rounded-3xl'>
                     <div className='flex relative justify-center  items-center'>
                         <img className='absolute top-28' src={img1} alt="" />
 
