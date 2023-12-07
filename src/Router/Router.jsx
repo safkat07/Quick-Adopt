@@ -6,6 +6,8 @@ import ErrorPage from "../Layout/ErrorPage/ErrorPage";
 import Home from "../Layout/AllPages/Home/Home";
 import SeeAllPets from "../Layout/FrontSections/PetCategory/SeeAllPets/SeeAllPets";
 import SinglePetCategory from "../Layout/FrontSections/PetCategory/SinglePetCategory/SinglePetCategory";
+import Login from "../Layout/Authentication/Login/Login";
+import Register from "../Layout/Authentication/Registration/Register";
 
 
 const router = createBrowserRouter([
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path:'/login',
+      element: <Login></Login>
+    },
+    {
+      path: '/register',
+      element: <Register></Register>
+    }
   ]);
 
   export default router

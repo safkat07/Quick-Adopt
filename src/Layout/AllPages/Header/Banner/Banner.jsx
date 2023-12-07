@@ -9,14 +9,14 @@ const Banner = () => {
     };
 
     return (
-        <div className='bg-[#EBF1EE] px-20 min-h-screen'>
-            
-            <div className='flex md:flex-row flex-col space-x-20   text-left items-center'>
+        <div className='bg-[#EBF1EE] md:px-20 min-h-screen'>
+
+            <div className='flex lg:flex-row flex-col-reverse space-x-20   text-left items-center'>
                 <div className='flex flex-col  items-start'>
                     <div className=''>
-                        <h1 className='font-lobster  text-7xl' style={{ fontWeight: 'normal' }}>
+                        <h1 className='font-lobster lg:text-left text-center text-2xl lg:text-7xl' style={{ fontWeight: 'normal' }}>
                             {' '} <br />
-                            <span className='font-monster text-5xl'>
+                            <span className='font-monster text-2xl md:text-4xl lg:text-5xl'>
                                 <Typewriter
                                     words={["Trusted Pet Care.Dont buy, please adopt"]}
                                     loop={1}
@@ -32,7 +32,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='transition-all duration-1000 hover:px-5 ' src={banner} alt="" />
+                    <img className='transition-all lg:w-auto md:w-full w-11/12   duration-1000 lg:hover:px-5 ' src={banner} alt="" />
                 </div>
             </div>
             {/* <div className='text-center max-w-5xl mx-auto mt2 text-3xl'>

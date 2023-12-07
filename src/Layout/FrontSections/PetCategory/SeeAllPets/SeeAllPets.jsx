@@ -13,7 +13,7 @@ const SeeAllPets = () => {
             <h2 className="text-5xl font-maven underline font-medium text-center">Collection Of Our All Pets</h2>
             <div>
                 {
-                    isLoading ? <div className="flex justify-center h-screen items-center">
+                    isLoading ? <div className="flex justify-center h-[50vh] items-center">
                         <LoadingSpinner></LoadingSpinner>
                     </div>
                         :
