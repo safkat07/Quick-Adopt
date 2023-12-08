@@ -11,6 +11,7 @@ import Banner from "../Header/Banner/Banner";
 import CatsDogs from "../../FrontSections/CatsDogs/CatsDogs";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import MainTitle from "../../../Components/UseableComponents/Title/MainTitle";
 AOS.init();
 const Home = () => {
 
@@ -31,6 +32,7 @@ const Home = () => {
                 <MeetTeam></MeetTeam>
                 {/* <FAQsection></FAQsection> */}
                 <Services></Services>
+                <MainTitle></MainTitle>
             </div>
         </HelmetProvider>
     );

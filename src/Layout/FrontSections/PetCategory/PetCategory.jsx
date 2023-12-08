@@ -5,6 +5,7 @@ import PetCategoryCard from './PetCategoryCard';
 import MainButton from '../../../Components/UseableComponents/Buttons/MainButton';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../../../Components/UseableComponents/Loader/LoadingSpinner';
+import MainTitle from '../../../Components/UseableComponents/Title/MainTitle';
 
 const PetCategory = () => {
     const baseURL = UseAxiosBaseURL()
@@ -21,7 +22,7 @@ const PetCategory = () => {
     return (
         <MainContainer>
             <div className='flex justify-between items-center'>
-                <h2 className='text-6xl font-semibold font-maven'>12+ Pet Category Available</h2>
+                <MainTitle maintitle={"12+ Pet Category Available"}></MainTitle>
                 <Link to='/seeallpets'>
                     <MainButton btnText={"See All"}></MainButton>
                 </Link>

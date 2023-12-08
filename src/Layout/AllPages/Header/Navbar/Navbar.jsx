@@ -27,16 +27,21 @@ const Navbar = () => {
                     </div>
                     <div>
                         <ul className='list-none hidden  flex-row  text-center  font-maven text-xl  lg:flex gap-6'>
-                            <li><NavLink className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                            <li><NavLink to='/' className={({ isActive, }) =>
+                                isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"
+                            }>
                                 Home
                             </NavLink></li>
-                            <li><NavLink className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                            <li><NavLink to='/find' className={({ isActive, }) =>
+                                isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                 Find A Puppy
                             </NavLink></li>
-                            <li><NavLink className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                            <li><NavLink to='/about' className={({ isActive, }) =>
+                                isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                 About Us
                             </NavLink></li>
-                            <li><NavLink className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                            <li><NavLink to='/stories' className={({ isActive, }) =>
+                                isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                 Stories
                             </NavLink></li>
 

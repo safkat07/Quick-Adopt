@@ -3,10 +3,11 @@ import MainContainer from '../../../Components/UseableComponents/MainContainer/M
 import img1 from '../../../assets/Jimena_img.png'
 import img2 from '../../../assets/Shemanna_img.png'
 import img3 from '../../../assets/Stephanie_img.png'
+import MainTitle from '../../../Components/UseableComponents/Title/MainTitle';
 const MeetTeam = () => {
     return (
         <MainContainer>
-            <p className='text-center font-medium text-7xl font-maven'>Meet The Team</p>
+            <MainTitle maintitle={"Meet The Team"}></MainTitle>
             <div className='grid  pt-10 grid-cols-3 justify-center items-center'>
                 <div className='text-center'>
                     <img className='transition-all duration-1000 hover:p-5 ' src={img1} alt="" />

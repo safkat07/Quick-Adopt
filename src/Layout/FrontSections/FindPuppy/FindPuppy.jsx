@@ -6,12 +6,12 @@ import img3 from '../../../assets/Frame-10.png'
 import arrow from '../../../assets/easy-step-arrow.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import MainTitle from '../../../Components/UseableComponents/Title/MainTitle';
 AOS.init();
 const FindPuppy = () => {
     return (
         <MainContainer >
-            <p className='text-6xl font-semibold text-center  text-[#737373] max-w-xl mx-auto'>Find Trusted Pet Care
-                In 3 Easy Steps</p>
+            <MainTitle maintitle={"Find Trusted Pet Care In 3 Easy Steps"}></MainTitle>
             <div className='flex flex-col md:flex-row items-center justify-center gap-x-7'>
                 <div  className='bg-[#EBF1EE]  hover:p-10 transition-all duration-700   w-96 h-[480px] rounded-3xl'>
                     <div className='flex relative justify-center  items-center'>
