@@ -35,7 +35,7 @@ const Navbar = () => {
                         <div onClick={() => setOpen(!open)} className='block text-2xl font-bold lg:hidden'>
                             <Hamburger ></Hamburger>
                         </div>
-                        <ul className={open ? "list-none absolute bg-[#EBF1EE] w-full  right-0 top-28 transition-all duration-700  min-h-[80vh] space-y-7 text-4xl flex-row  text-right px-20  font-maven   lg:flex gap-10" : "list-none transition-all duration-700 hidden bg-[#EBF1EE] w-full left-0 right-0 top-24  flex-row  text-center  font-maven text-xl  lg:flex gap-6"}>
+                        <ul className={open ? "list-none absolute bg-[#EBF1EE] w-full  right-0 top-28 transition-all duration-700  min-h-[85vh] space-y-7 text-4xl flex-row  text-right px-20  font-maven   lg:flex gap-10" : "list-none transition-all duration-700 hidden bg-[#EBF1EE] w-full left-0 right-0 top-24  flex-row  text-center  font-maven text-xl  lg:flex gap-6"}>
                             <li><NavLink to='/' className={({ isActive, }) =>
                                 isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"
                             }>
@@ -45,10 +45,7 @@ const Navbar = () => {
                                 isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                 Find A Puppy
                             </NavLink></li>
-                            <li><NavLink to='/about' className={({ isActive, }) =>
-                                isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                About Us
-                            </NavLink></li>
+                            
                             <li><NavLink to='/stories' className={({ isActive, }) =>
                                 isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                 Stories
@@ -62,6 +59,10 @@ const Navbar = () => {
                                         Login
                                     </NavLink></li>
                             }
+                            <li><NavLink to='/dashboard' className={({ isActive, }) =>
+                                isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                                Dashboard
+                            </NavLink></li>
 
                         </ul>
 
