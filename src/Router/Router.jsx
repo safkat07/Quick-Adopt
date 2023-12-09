@@ -12,6 +12,9 @@ import Dashboard from "../Layout/AllPages/Dashboard/Dashboard";
 import AddNewPet from "../Layout/AllPages/Dashboard/AddNewPet/AddNewPet";
 import AddedPets from "../Layout/AllPages/Dashboard/AddedPets/AddedPets";
 import ShowMyAddedPets from "../Layout/AllPages/Dashboard/ShowMyAddedPets/ShowMyAddedPets";
+import FindAPuppy from "../Layout/AllPages/FindAPuppy/FindAPuppy";
+import Stories from "../Layout/AllPages/Stories/Stories";
+import AddSuccesStories from "../Layout/AllPages/Dashboard/AddSuccesStories/AddSuccesStories";
 
 
 const router = createBrowserRouter([
@@ -32,6 +35,14 @@ const router = createBrowserRouter([
           path: '/singlepetcategory/:id',
           element: <SinglePetCategory></SinglePetCategory>,
           loader: ({params}) => fetch(`https://quick-adopt-server-side.vercel.app/api/v1/allpetcategory/${params.id}`)
+        },
+        {
+          path: '/findapuppy',
+          element: <FindAPuppy></FindAPuppy>
+        },
+        {
+          path: '/stories',
+          element: <Stories></Stories>
         }
       ]
     },
@@ -57,6 +68,11 @@ const router = createBrowserRouter([
         {
           path: '/dashboard/myaddedpets',
           element: <ShowMyAddedPets></ShowMyAddedPets>
+        },
+        {
+          path: '/dashboard/successtories',
+          element: <AddSuccesStories></AddSuccesStories>
+
         }
       ]
     }

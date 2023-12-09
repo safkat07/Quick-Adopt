@@ -44,7 +44,7 @@ const Navbar = () => {
                                 }>
                                     Home
                                 </NavLink></li>
-                                <li><NavLink to='/find' className={({ isActive, }) =>
+                                <li><NavLink to='/findapuppy' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                     Find A Puppy
                                 </NavLink></li>
@@ -75,7 +75,7 @@ const Navbar = () => {
                             }>
                                 Home
                             </NavLink></li>
-                            <li><NavLink to='/find' className={({ isActive, }) =>
+                            <li><NavLink to='/findapuppy' className={({ isActive, }) =>
                                 isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                 Find A Puppy
                             </NavLink></li>
