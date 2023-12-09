@@ -9,6 +9,8 @@ const Dashboard = () => {
             <div className='flex'>
                 <div className='w-1/4 min-h-screen bg-gray-700'>
                     <div className='bg-black rounded-md w-64 mt-16 mx-auto  h-4/5'>
+                        <p className='text-center pt-10 font-semibold font-lobster text-3xl text-stone-300'>QuickAdopt</p>
+                        <p className='text-end text-xs mr-1 pt-1 font-maven text-stone-300'>Trusted pet adaption platform</p>
                         <ul className='text-center space-y-3 list-none font-maven  text-xl py-10'>
                             <li>
                                 <NavLink to='/dashboard' className={({ isActive, }) =>
