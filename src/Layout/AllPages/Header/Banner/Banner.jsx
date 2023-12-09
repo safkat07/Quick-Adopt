@@ -21,7 +21,7 @@ const Banner = () => {
                                     words={["Trusted Pet Care.Dont buy, please adopt"]}
                                     loop={1}
                                     cursor
-                                    cursorStyle='|'
+                                    cursorStyle=''
                                     typeSpeed={150}
                                     deleteSpeed={50}
                                     delaySpeed={1000}
