@@ -22,17 +22,17 @@ const Home = () => {
                 <Helmet>
                     <title>Quick Adopt | Home</title>
                 </Helmet>
-                {/* <Banner></Banner>
-                <FindPuppy></FindPuppy> */}
-                {/* <WeLove></WeLove> */}
-                {/* <CatsDogs></CatsDogs> */}
-                {/* <PetCategory></PetCategory> */}
+                <Banner></Banner>
+                <FindPuppy></FindPuppy>
+                <WeLove></WeLove>
+                <CatsDogs></CatsDogs>
+                <PetCategory></PetCategory>
                 <WhyUs></WhyUs>
                 {/* <OurBLog></OurBLog> */}
-                {/* <MeetTeam></MeetTeam> */}
+                <MeetTeam></MeetTeam>
                 {/* <FAQsection></FAQsection> */}
-                {/* <Services></Services> */}
-                {/* <MainTitle></MainTitle> */}
+                <Services></Services>
+                
             </div>
         </HelmetProvider>
     );

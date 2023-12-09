@@ -8,7 +8,7 @@ const MeetTeam = () => {
     return (
         <MainContainer>
             <MainTitle maintitle={"Meet The Team"}></MainTitle>
-            <div className='grid  pt-10 grid-cols-3 justify-center items-center'>
+            <div className='grid  pt-10 md:grid-cols-2 grid-cols-1 lg:grid-cols-3 justify-center gap-y-5 items-center'>
                 <div className='text-center'>
                     <img className='transition-all duration-1000 hover:p-5 ' src={img1} alt="" />
                     <p className='text-xl mt-3 font-monster'>Jimena Ulloa</p>
