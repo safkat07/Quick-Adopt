@@ -21,7 +21,7 @@ const PetCategory = () => {
     }, [])
     return (
         <MainContainer>
-            <div className='flex justify-between items-center'>
+            <div className='flex md:flex-row flex-col justify-between items-center'>
                 <MainTitle maintitle={"12+ Pet Category Available"}></MainTitle>
                 <Link to='/seeallpets'>
                     <MainButton btnText={"See All"}></MainButton>
@@ -32,7 +32,7 @@ const PetCategory = () => {
                     isLoading ? <div className='flex justify-center items-center'>
                         <LoadingSpinner></LoadingSpinner>
                     </div> :
-                        <div className='grid my-20 grid-cols-4 justify-center items-center'>
+                        <div className='grid my-20 space-y-5 lg:grid-cols-4 md:grid-cols-2 justify-center items-center'>
                             {
                                 categories.slice(0, dataLength).map(category => <PetCategoryCard key={category._id} {...category} ></PetCategoryCard>)
                             }
