@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
-      <Ripple background="#303938" color="#fff"  animation="slide" />
+      <Ripple background="#303938" color="#fff"   animation="slide" />
     </AuthProvider>
     <Toaster />
   </React.StrictMode>,

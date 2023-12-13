@@ -60,7 +60,7 @@ const Dashboard = () => {
                 </div>
                 <div className='w-full min-h-screen bg-[#EBF1EE]'>
                     <div className='text-center'>
-                        <DashboardTitle dashtitle={"Welcome to Dashboard"}></DashboardTitle>
+                        {/* <DashboardTitle dashtitle={"Welcome to Dashboard"}></DashboardTitle> */}
                     </div>
 
                     <Outlet></Outlet>
