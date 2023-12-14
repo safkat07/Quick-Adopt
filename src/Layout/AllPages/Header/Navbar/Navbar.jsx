@@ -28,7 +28,7 @@ const Navbar = () => {
                     <div className='flex   px-5  h-24 flex-row  justify-between   items-center'>
 
                         <div className='flex flex-row items-center'>
-                            <a className='no-underline text-black' href="#">
+                            <a className='no-underline text-black' href="/">
                                 <span className='text-4xl font-bold font-lobster transition-all duration-700 hover:tracking-[.3em] tracking-[.4rem]'>QuickAdopt</span>
                             </a>
                         </div>
