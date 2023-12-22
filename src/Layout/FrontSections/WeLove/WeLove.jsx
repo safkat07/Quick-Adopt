@@ -2,6 +2,7 @@ import React from 'react';
 import MainContainer from '../../../Components/UseableComponents/MainContainer/MainContainer';
 import img from '../../../assets/welove.png'
 import './welove.css'
+import { motion } from 'framer-motion';
 const WeLove = () => {
     return (
         <div className='bg-[#EBF1EE] w-full bg min-h-screen'>

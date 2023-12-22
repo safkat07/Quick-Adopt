@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import banner from '../../../../assets/bannerimg.png'
+import { motion } from 'framer-motion';
 const Banner = () => {
 
 
@@ -9,12 +10,13 @@ const Banner = () => {
     };
 
     return (
-        <div className='bg-[#EBF1EE] md:px-20 min-h-screen'>
+        <div className='bg-[#EBF1EE] md:px-20 min-h-[89vh]'>
+            <motion.div
 
-            <div className='flex lg:flex-row flex-col-reverse space-x-20   text-left items-center'>
+                className='flex lg:flex-row justify-between flex-col-reverse space-x-20   text-left items-center'>
                 <div className='flex flex-col  items-start'>
                     <div className=''>
-                        <h1 className='font-lobster lg:text-left text-center text-2xl lg:text-7xl' style={{ fontWeight: 'normal' }}>
+                        {/* <h1 className='font-lobster lg:text-left text-center text-2xl lg:text-7xl' style={{ fontWeight: 'normal' }}>
                             {' '} <br />
                             <span className='font-monster text-2xl md:text-4xl lg:text-5xl'>
                                 <Typewriter
@@ -28,18 +30,31 @@ const Banner = () => {
                                     onLoopDone={handleDone}
                                 />
                             </span>
-                        </h1>
+                        </h1> */}
+                        <motion.h2
+                            initial={{ x: -1000 }}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 1 }}
+                            className='font-monster text-7xl'>
+                            Trusted Pet Care
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ x: -950 }}
+                            animate={{ x: 100 }}
+                            transition={{ duration: 3.5 }}
+                            className='font-monster pt-2 text-5xl'>
+                            Dont buy, please adopt
+                        </motion.h2>
                     </div>
                 </div>
-                <div>
+                <motion.div
+                    // initial={{ y: -1000, opacity:0 }}
+                    animate={{ animation: "ease-in-out" }}
+                    transition={{ duration: 2 }}
+                >
                     <img className='transition-all lg:w-auto md:w-full w-11/12   duration-1000 lg:hover:px-5 ' src={banner} alt="" />
-                </div>
-            </div>
-            {/* <div className='text-center max-w-5xl mx-auto mt2 text-3xl'>
-                <p>
-                    Whether you’re a loving parent finding caring hands for your Pet, or a passionate Pet Sitter eager? We take care of the tedious side of Pet Care service, so you can get to what matters the most!
-                </p>
-            </div> */}
+                </motion.div>
+            </motion.div>
         </div>
     );
 };

@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         {
           path: '/singlepetcategory/:id',
           element: <SinglePetCategory></SinglePetCategory>,
-          loader: ({params}) => fetch(`http://localhost:5000/api/v1/allpetcategory/${params.id}`)
+          loader: ({params}) => fetch(`https://quick-adopt-server-side.vercel.app/api/v1/allpetcategory/${params.id}`)
         },
         {
           path: '/findapuppy',

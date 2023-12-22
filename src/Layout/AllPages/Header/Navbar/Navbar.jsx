@@ -6,6 +6,7 @@ import Hamburger from 'hamburger-react'
 import toast from 'react-hot-toast';
 import { useState } from 'react';
 import Headroom from 'react-headroom';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const { user, logoutUser } = UseAuth()
@@ -25,13 +26,19 @@ const Navbar = () => {
             <div>
                 <div className=' bg-[#EBF1EE]'>
 
-                    <div className='flex   px-5  h-24 flex-row  justify-between   items-center'>
+                    <motion.div
 
-                        <div className='flex flex-row items-center'>
+                        className='flex   px-5  h-24 flex-row  justify-between   items-center'>
+
+                        <motion.div
+                            initial={{ y: -250 }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 1 }}
+                            className='flex flex-row items-center'>
                             <a className='no-underline text-black' href="/">
                                 <span className='text-4xl font-bold font-lobster transition-all duration-700 hover:tracking-[.3em] tracking-[.4rem]'>QuickAdopt</span>
                             </a>
-                        </div>
+                        </motion.div>
 
                         <div>
                             <div onClick={() => setOpen(!open)} className='block text-2xl font-bold lg:hidden'>
@@ -72,36 +79,58 @@ const Navbar = () => {
                                 </ul>
                             </div>
 
-
-
                             <ul className="list-none transition-all duration-700 hidden  bg-[#EBF1EE]    flex-row  text-center  font-maven text-xl  lg:flex gap-6">
-                                <li><NavLink to='/' className={({ isActive, }) =>
+                                <motion.li
+                                    initial={{ y: -250 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ duration: 1.8 }}
+                                ><NavLink to='/' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"
                                 }>
-                                    Home
-                                </NavLink></li>
-                                <li><NavLink to='/findapuppy' className={({ isActive, }) =>
+                                        Home
+                                    </NavLink></motion.li>
+                                <motion.li
+                                    initial={{ y: -250 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ duration: 2.5 }}
+                                ><NavLink to='/findapuppy' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                    Find A Puppy
-                                </NavLink></li>
+                                        Find A Puppy
+                                    </NavLink></motion.li>
 
-                                <li><NavLink to='/stories' className={({ isActive, }) =>
+                                <motion.li
+                                    initial={{ y: -250 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ duration: 3.5 }}
+                                ><NavLink to='/stories' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                    Stories
-                                </NavLink></li>
+                                        Stories
+                                    </NavLink></motion.li>
 
                                 {
-                                    user ? <li><NavLink onClick={handleLogout} className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                        Logout
-                                    </NavLink></li> :
-                                        <li><NavLink to='/login' className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                            Login
-                                        </NavLink></li>
+                                    user ? <motion.li
+                                        initial={{ y: -250 }}
+                                        animate={{ y: 0 }}
+                                        transition={{ duration: 4.5 }}
+                                    ><NavLink onClick={handleLogout} className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                                            Logout
+                                        </NavLink></motion.li> :
+                                        <motion.li
+                                            initial={{ y: -250 }}
+                                            animate={{ y: 0 }}
+                                            transition={{ duration: 4.5 }}
+                                        ><NavLink to='/login' className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                                                Login
+                                            </NavLink></motion.li>
                                 }
-                                <li><NavLink to='/dashboard' className={({ isActive, }) =>
+                                <motion.li
+                                    initial={{ y: -250 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ duration: 5 }}
+                                ><NavLink to='/dashboard' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                    Dashboard
-                                </NavLink></li>
+                                        Dashboard
+                                    </NavLink></motion.li>
 
                             </ul>
 
@@ -110,7 +139,7 @@ const Navbar = () => {
 
 
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </Headroom>

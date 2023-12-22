@@ -7,10 +7,10 @@ const MainLayout = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='min-h-screen'>
+            <div className='min-h-[50vh]'>
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 };

@@ -7,42 +7,82 @@ import toast from 'react-hot-toast';
 
 const AddNewPet = () => {
     const { user } = UseAuth()
+    //state to upload image to coulnary
+    const [image, setImage] = useState('')
+    const [Imgurl, setImgurl] = useState('')
+
+
+
     const [loading, SetLoading] = useState(true)
     const baseURL = UseAxiosBaseURL()
     const PetOwnerEmail = user?.email
     const PetOwnerName = user?.displayName
     // console.log(addedPetBy);
+    const saveImage = async () => {
+        const data = new FormData();
+        data.append("file", image);
+        data.append("upload_preset", "PetAdopt");
+        data.append("cloud_name", "dxo4lamix");
+
+        try {
+            if (image === null) {
+                // return toast.error("Please Upload image")
+                return null
+            }
+
+            const res = await fetch('https://api.cloudinary.com/v1_1/dxo4lamix/image/upload', {
+                method: "POST",
+                body: data
+            })
+
+            const cloudData = await res.json();
+            setImgurl(cloudData.url);
+            console.log(cloudData.url);
+            // toast.success("Image Upload Successfully")
+        } catch (error) {
+
+        }
+    }
     const handleFormSubmit = (e) => {
         e.preventDefault()
+        saveImage()
+        // console.log("img", setImgurl);
         const form = e.target
         const PetName = form.petName.value
         const PetAge = form.petAge.value
         const PetLocation = form.petLocation.value
         const PetCategory = form.petCategory.value
-        const PetImage = form.petImage.value
+        // const PetImage = form.petImage.value
         const PetShortDescription = form.petShortDescription.value
         const PetGender = form.petGender.value
+        //upload image
         const newPet = {
             PetName,
             PetAge,
             PetCategory,
             PetGender,
             PetLocation,
-            PetImage,
+            Imgurl,
             PetShortDescription,
             PetOwnerName,
             PetOwnerEmail,
 
         }
-       const loadingID = toast.loading("Adding Your Pet. Please Wait......")
+        // const loadingID = toast.loading("Adding Your Pet. Please Wait......")
         // console.log(newPet);
         //sending data to server side
         baseURL.post('api/v1/allpets', newPet)
             .then(res => {
-                // console.log('data send succes', res.data);
-
-                if (res.statusText == 'OK') {
-                    toast.success("Success! You have successfully added", {id: loadingID})
+                console.log('data send succes', res.data);
+                const fn = res.data
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             })
     }
@@ -113,7 +153,7 @@ const AddNewPet = () => {
                     </div> */}
                     <div className='w-3/4'>
                         <p className='text-xl font-maven'>Enter Your Pet Image Link</p>
-                        <input name='petImage' className=' py-3 rounded-lg border-none text-center mx-auto w-full' type="text" placeholder='pet image link' />
+                        <input onChange={(e) => setImage(e.target.files[0])} name='petImage' className=' py-3 rounded-lg border cursor-pointer text-center mx-auto w-full' type="file" placeholder='pet image link' />
                     </div>
                 </div>
                 <div className='flex  my-5 justify-center w-full '>
