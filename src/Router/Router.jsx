@@ -19,6 +19,7 @@ import PetDetails from "../Layout/AllPages/PetDetails/PetDetails";
 import UserProfile from "../Layout/AllPages/UserProfile/UserProfile";
 import FavouritesPets from "../Layout/AllPages/FavouritesPets/FavouritesPets";
 import UpdatePet from "../Layout/AllPages/Dashboard/UpdatePet/UpdatePet";
+import PrivateRoute from "../Components/Providers/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -43,7 +44,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/petdetails/:id',
-        element: <PetDetails></PetDetails>,
+        element: <PrivateRoute>
+          <PetDetails></PetDetails>
+        </PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/api/v1/allpets/${params.id}`)
       },
       {

@@ -6,7 +6,7 @@ import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import UseAuth from '../../../Hooks/UseAuth';
 import toast from 'react-hot-toast';
@@ -14,6 +14,8 @@ import toast from 'react-hot-toast';
 const Login = () => {
     const { loginUser, user } = UseAuth()
     const navigation = useNavigate()
+    const location = useLocation()
+    const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false);
    
     const handleLoginForm = async (e) => {
@@ -26,7 +28,7 @@ const Login = () => {
         try {
             await loginUser(email, password)
             toast.success("Log In Complete", {id:loadingId})
-            navigation('/')
+            navigation(location?.state ? location.state : '/')
         }
         catch (err) {
             toast.err(err.message, {id:loadingId})

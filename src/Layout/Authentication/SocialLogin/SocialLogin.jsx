@@ -2,19 +2,20 @@ import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import MainContainer from "../../../Components/UseableComponents/MainContainer/MainContainer";
 import UseAuth from "../../../Hooks/UseAuth";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
 
 
 const SocialLogin = () => {
     const { loginGithub, loginGoogle } = UseAuth()
     const navigate = useNavigate()
+    const location = useLocation()
     const handleLogin = async (media) => {
         const loadId = toast.loading("Loading Please wait....")
         try {
             await media()
             toast.success('Login success', { id: loadId })
-            navigate('/')
+            navigate(location?.state ? location.state : '/')
         }
         catch (err) {
             toast.error(err.message, { id: loadId })
