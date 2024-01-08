@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PetCategoryCard = ({ img,
   petCategory, _id, description }) => {
   return (
-    <Link to={`/singlepetcategory/${_id}`}>
+    <Link state={{petCategory: petCategory}} to={`/singlepetcategory`}>
       <div className='bg-[#EBF1EE] transition-all duration-700 hover:p-7 mx-auto w-72 h-72 rounded-full'>
         <div className='w-full  flex-col h-full mx-auto relative flex justify-center items-center '>
           <img className='w-full relative h-full mx-auto rounded-full' src={img} alt="" />

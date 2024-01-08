@@ -33,20 +33,20 @@ const Dashboard = () => {
                                     My added Pets
                                 </NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink to='/dashboard/myaddedpets' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 text-white hover:px-2 transition-all duration-700 "
                                 }>
                                     Show All Pets
                                 </NavLink>
-                            </li>
-                            <li>
+                            </li> */}
+                            {/* <li>
                                 <NavLink to='/dashboard/successtories' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 text-white hover:px-2 transition-all duration-700 "
                                 }>
                                     Add Your Success Stories
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li>
                                 <NavLink to='/' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 text-white hover:px-2 transition-all duration-700 "

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const AxiosURL = axios.create({
-    baseURL: 'https://quick-adopt-server-side.vercel.app/'
+    baseURL: 'http://localhost:5000/'
 })
 const UseAxiosBaseURL = () => {
     return AxiosURL

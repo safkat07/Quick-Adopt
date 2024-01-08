@@ -6,4 +6,4 @@ const MainButton = ({ btnText }) => {
     );
 };
 
-export default MainButton;
+export default MainButton

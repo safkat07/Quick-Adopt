@@ -27,13 +27,13 @@ const Navbar = () => {
                 <div className=' bg-[#EBF1EE]'>
 
                     <motion.div
-
+                        initial={{ y: -250 }}
+                        animate={{ y: 0 }}
+                        transition={{ duration: 1 }}
                         className='flex   px-5  h-24 flex-row  justify-between   items-center'>
 
                         <motion.div
-                            initial={{ y: -250 }}
-                            animate={{ y: 0 }}
-                            transition={{ duration: 1 }}
+
                             className='flex flex-row items-center'>
                             <a className='no-underline text-black' href="/">
                                 <span className='text-4xl font-bold font-lobster transition-all duration-700 hover:tracking-[.3em] tracking-[.4rem]'>QuickAdopt</span>
@@ -81,56 +81,53 @@ const Navbar = () => {
 
                             <ul className="list-none transition-all duration-700 hidden  bg-[#EBF1EE]    flex-row  text-center  font-maven text-xl  lg:flex gap-6">
                                 <motion.li
-                                    initial={{ y: -250 }}
-                                    animate={{ y: 0 }}
-                                    transition={{ duration: 1.8 }}
+
                                 ><NavLink to='/' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"
                                 }>
                                         Home
                                     </NavLink></motion.li>
                                 <motion.li
-                                    initial={{ y: -250 }}
-                                    animate={{ y: 0 }}
-                                    transition={{ duration: 2.5 }}
+
                                 ><NavLink to='/findapuppy' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                         Find A Puppy
                                     </NavLink></motion.li>
 
-                                <motion.li
+                                {/* <motion.li
                                     initial={{ y: -250 }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 3.5 }}
                                 ><NavLink to='/stories' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                         Stories
-                                    </NavLink></motion.li>
+                                    </NavLink></motion.li> */}
 
                                 {
                                     user ? <motion.li
-                                        initial={{ y: -250 }}
-                                        animate={{ y: 0 }}
-                                        transition={{ duration: 4.5 }}
+
                                     ><NavLink onClick={handleLogout} className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                             Logout
                                         </NavLink></motion.li> :
                                         <motion.li
-                                            initial={{ y: -250 }}
-                                            animate={{ y: 0 }}
-                                            transition={{ duration: 4.5 }}
+
                                         ><NavLink to='/login' className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                                 Login
                                             </NavLink></motion.li>
                                 }
-                                <motion.li
-                                    initial={{ y: -250 }}
-                                    animate={{ y: 0 }}
-                                    transition={{ duration: 5 }}
+                                {user && <motion.li
+
                                 ><NavLink to='/dashboard' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
                                         Dashboard
-                                    </NavLink></motion.li>
+                                    </NavLink></motion.li>}
+                                {
+                                    user && <motion.li
+
+                                    ><NavLink to='/favourites' className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                                            Favourites
+                                        </NavLink></motion.li>
+                                }
 
                             </ul>
 

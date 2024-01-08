@@ -23,15 +23,15 @@ const Home = () => {
                     <title>Quick Adopt | Home</title>
                 </Helmet>
                 <Banner></Banner>
-                {/* <FindPuppy></FindPuppy>
+                <PetCategory></PetCategory>
+                {/* {/* <FindPuppy></FindPuppy> */}
                 <WeLove></WeLove>
                 <CatsDogs></CatsDogs>
-                <PetCategory></PetCategory>
-                <WhyUs></WhyUs> */}
+                <WhyUs></WhyUs> 
                 {/* <OurBLog></OurBLog> */}
-                {/* <MeetTeam></MeetTeam> */}
+                <MeetTeam></MeetTeam>
                 {/* <FAQsection></FAQsection> */}
-                {/* <Services></Services> */}
+                <Services></Services>
                 
             </div>
         </HelmetProvider>
