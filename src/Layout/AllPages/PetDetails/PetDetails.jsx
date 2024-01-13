@@ -71,6 +71,38 @@ const PetDetails = () => {
         }
 
     }
+
+    //handleRequestPet
+    const handleRequestPet = async (_id) => {
+        // console.log('handleRequestPet', _id);
+        const updatePetStatus = {
+            PetName,
+            PetAge,
+            PetCategory,
+            PetGender,
+            PetImage,
+            PetStatus: "Requested",
+            PetLocation,
+            PetOwnerName,
+            PetOwnerEmail,
+            favUserEmail,
+            favntUserName,
+        }
+        baseURL.patch(`/api/v1/allpets/${_id}`, updatePetStatus)
+            .then(res => {
+                console.log('data updateRequest succes', res.data);
+                const fn = res.data
+                if (res.data.modifiedCount) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Adaption Requested Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
     return (
         <MainContainer>
             <div className='flex font-maven justify-between     '>
@@ -102,7 +134,7 @@ const PetDetails = () => {
                     <div className='bg-zinc-300 text-3xl font-semibold rounded-lg text-center w-80 h-10'>
                         {PetCategory}
                     </div>
-                    <button className='bg-zinc-300 mt-7 cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
+                    <button onClick={() => handleRequestPet(_id)} className='bg-zinc-300 mt-7 cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
                         Request To Adopt
                     </button>
                     <div className='mt-10'>

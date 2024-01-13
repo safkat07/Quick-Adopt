@@ -91,6 +91,10 @@ const router = createBrowserRouter([
         element: <ShowMyAddedPets></ShowMyAddedPets>
       },
       {
+        path: '/dashboard/requestedpets',
+        element: <ShowMyAddedPets></ShowMyAddedPets>
+      },
+      {
         path: '/dashboard/successtories',
         element: <AddSuccesStories></AddSuccesStories>
 

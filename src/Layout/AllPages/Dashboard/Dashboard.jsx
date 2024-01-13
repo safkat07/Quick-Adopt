@@ -33,6 +33,13 @@ const Dashboard = () => {
                                     My added Pets
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to='/dashboard/requestedpets' className={({ isActive, }) =>
+                                    isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451]  rounded-md py-1 text-white hover:px-2 transition-all duration-700 "
+                                }>
+                                    Requested Pets
+                                </NavLink>
+                            </li>
                             {/* <li>
                                 <NavLink to='/dashboard/myaddedpets' className={({ isActive, }) =>
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 text-white hover:px-2 transition-all duration-700 "
