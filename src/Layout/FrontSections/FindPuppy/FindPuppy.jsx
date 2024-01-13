@@ -7,13 +7,13 @@ import arrow from '../../../assets/easy-step-arrow.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MainTitle from '../../../Components/UseableComponents/Title/MainTitle';
-AOS.init();
+
 const FindPuppy = () => {
     return (
         <MainContainer >
             <MainTitle maintitle={"Find Trusted Pet Care In 3 Easy Steps"}></MainTitle>
             <div className='flex flex-col md:px-4 lg:px-0  md:flex-row items-center justify-center gap-x-2 lg:gap-x-7'>
-                <div  className='bg-[#EBF1EE]  lg:hover:p-10 transition-all duration-700   w-10/12 h-[480px] rounded-3xl'>
+                <div className='bg-[#EBF1EE]  lg:hover:p-10 transition-all duration-700   w-10/12 h-[480px] rounded-3xl'>
                     <div className='flex relative justify-center  items-center'>
                         <img className='absolute  top-28' src={img1} alt="" />
 

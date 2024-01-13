@@ -34,6 +34,7 @@ const FindAPuppyCard = ({ PetName,
             PetLocation,
             PetOwnerName,
             PetOwnerEmail,
+            PetStatus,
             favUserEmail,
             favntUserName
         }
@@ -66,7 +67,15 @@ const FindAPuppyCard = ({ PetName,
     return (
         <MainContainer>
             <div className='w-[500px] rounded-xl font-maven h-[600px] bg-[#EBF1EE]'>
-                <img className='w-full h-[50%] rounded-t-xl' src={PetImage} alt="" />
+                <div className='h-1/2'>
+                    <img className='w-full h-[95%] rounded-t-xl' src={PetImage} alt="" />
+                    {
+                        PetStatus == "Adopted"? <div className='absolute ml-2 mt-2 px-3 rounded-md font-semibold bg-yellow-300 text-3xl top-64'>
+                            {PetStatus}
+                        </div> :
+                        <div></div>
+                    }
+                </div>
                 <div className='w-11/12 mx-auto'>
                     <p className='text-white text-xl bg-gray-500 w-1/6 text-center rounded-xl'>{PetCategory}</p>
                     <p className='font-maven text-3xl mt-2 uppercase'>{PetName}</p>
