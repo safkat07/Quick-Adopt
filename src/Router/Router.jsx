@@ -20,6 +20,7 @@ import UserProfile from "../Layout/AllPages/UserProfile/UserProfile";
 import FavouritesPets from "../Layout/AllPages/FavouritesPets/FavouritesPets";
 import UpdatePet from "../Layout/AllPages/Dashboard/UpdatePet/UpdatePet";
 import PrivateRoute from "../Components/Providers/PrivateRoute/PrivateRoute";
+import RequestedPets from "../Layout/AllPages/Dashboard/RequestedPets/RequestedPets";
 
 
 const router = createBrowserRouter([
@@ -92,7 +93,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard/requestedpets',
-        element: <ShowMyAddedPets></ShowMyAddedPets>
+        element: <RequestedPets></RequestedPets>
       },
       {
         path: '/dashboard/successtories',
