@@ -7,10 +7,16 @@ import toast from 'react-hot-toast';
 import { useState } from 'react';
 import Headroom from 'react-headroom';
 import { motion } from 'framer-motion';
+import UseRequestedPets from '../../../../Hooks/UseRequestedPets';
+import UseFavorites from '../../../../Hooks/UseFavorites';
+import UseUserRequest from '../../../../Hooks/UseUserRequest';
 
 const Navbar = () => {
     const { user, logoutUser } = UseAuth()
     const [open, setOpen] = useState(false)
+    const [allRequestedPets, isLoading] = UseRequestedPets()
+    const [favPets] = UseFavorites()
+    const [userReq] = UseUserRequest()
     const handleLogout = async () => {
         try {
             await logoutUser()
@@ -50,12 +56,12 @@ const Navbar = () => {
                                 <Hamburger ></Hamburger>
                             </div>
                             <div className='lg:hidden  flex'>
-                                <ul   className={open ? "list-none absolute bg-[#EBF1EE] w-full   top-20 pt-4 transition-all  duration-700  min-h-screen space-y-7 md:text-4xl text-3xl flex-row  text-right px-20  font-maven right-0 scroll-smooth  lg:flex gap-10"
+                                <ul className={open ? "list-none absolute bg-[#EBF1EE] w-full   top-20 pt-4 transition-all  duration-700  min-h-screen space-y-7 md:text-4xl text-3xl flex-row  text-right px-20  font-maven right-0 scroll-smooth  lg:flex gap-10"
                                     :
                                     "list-none absolute md:text-4xl  min-h-screen top-20 transition-all inset-y-0 w-screen duration-1000 pt-4 right-0 transform -translate-x-full ease-in-out opacity-0  space-y-7 text-3xl flex-row text-right font-maven lg:flex gap-10"}
-                                    onClick={() => setOpen(!open)} 
-                                    >
-                                    <li><NavLink   to='/' className={({ isActive, }) =>
+                                    onClick={() => setOpen(!open)}
+                                >
+                                    <li><NavLink to='/' className={({ isActive, }) =>
                                         isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline  hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"
                                     }>
                                         Home
@@ -80,7 +86,7 @@ const Navbar = () => {
                                     }
                                     <li><NavLink to='/dashboard' className={({ isActive, }) =>
                                         isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                        Dashboard
+                                        Dashboard {allRequestedPets.length > 0 && allRequestedPets.length}
                                     </NavLink></li>
 
                                 </ul>
@@ -122,19 +128,26 @@ const Navbar = () => {
                                                 Login
                                             </NavLink></motion.li>
                                 }
-                                {user && <motion.li
-
-                                ><NavLink to='/dashboard' className={({ isActive, }) =>
-                                    isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                        Dashboard
-                                    </NavLink></motion.li>}
                                 {
                                     user && <motion.li
 
                                     ><NavLink to='/favourites' className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
-                                            Favourites
+                                            Favourites ({favPets.length > 0 ? favPets.length : 0})
                                         </NavLink></motion.li>
                                 }
+                                {
+                                    user && <motion.li
+
+                                    ><NavLink to='/requested' className={"no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                                            Requested ({userReq.length > 0 ? userReq.length : 0})
+                                        </NavLink></motion.li>
+                                }
+                                {user && <motion.li
+
+                                ><NavLink to='/dashboard' className={({ isActive, }) =>
+                                    isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 text-black"}>
+                                        Dashboard ({allRequestedPets.length > 0 ? allRequestedPets.length : 0})
+                                    </NavLink></motion.li>}
 
                             </ul>
 

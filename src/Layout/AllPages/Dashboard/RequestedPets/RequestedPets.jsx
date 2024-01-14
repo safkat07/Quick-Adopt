@@ -5,31 +5,14 @@ import MainTitle from '../../../../Components/UseableComponents/Title/MainTitle'
 import LoadingSpinner from '../../../../Components/UseableComponents/Loader/LoadingSpinner';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import UseRequestedPets from '../../../../Hooks/UseRequestedPets';
 
 const RequestedPets = () => {
     const { user } = UseAuth()
     const recentUserName = user?.displayName
     const recentUserEmail = user?.email
     const baseURL = UseAxiosBaseURL()
-    const [isLoading, setIsLoading] = useState(true)
-    const [requestedPet, setRequestedPet] = useState([])
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await baseURL.get(`/api/v1/allpets?PetOwnerEmail=${recentUserEmail}`)
-                const data = response.data
-                const request = data.filter(req => req.PetStatus == "Requested")
-                setRequestedPet(request)
-            }
-            catch (error) {
-                console.error(error)
-            }
-            finally {
-                setIsLoading(false)
-            }
-        }
-        fetchData()
-    }, [recentUserName, baseURL])
+    const [allRequestedPets, isLoading] = UseRequestedPets()
     //accpet adaption request
     const handleAccept = (_id) => {
         // console.log("accept ", _id);
@@ -82,7 +65,7 @@ const RequestedPets = () => {
                         :
                         <div>
                             {
-                                requestedPet?.length == 0 ? <MainTitle maintitle={"No Request Found"}></MainTitle>
+                                allRequestedPets?.length == 0 ? <MainTitle maintitle={"No Request Found"}></MainTitle>
                                     :
                                     <div className="overflow-x-auto font-maven">
                                         <table className="table ">
@@ -104,7 +87,7 @@ const RequestedPets = () => {
                                             </thead>
 
                                             {
-                                                requestedPet.map(pet => <tbody>
+                                                allRequestedPets.map(pet => <tbody>
 
                                                     <tr key={pet._id} className='text-2xl'>
                                                         <th>

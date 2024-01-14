@@ -102,6 +102,38 @@ const PetDetails = () => {
                     });
                 }
             })
+
+        //post
+        const favoritePets = {
+            PetName,
+            PetAge,
+            PetCategory,
+            PetGender,
+            PetImage,
+            oldId: _id,
+            PetStatus: "Requested",
+            Requestby: favUserEmail,
+            PetLocation,
+            PetOwnerName,
+            PetOwnerEmail,
+            favUserEmail,
+            favntUserName
+        }
+        try {
+            const res = await baseURL.post('/api/v1/allreqpets', favoritePets);
+            console.log('data send success', res.data);
+
+            if (res.data.insertedId) {
+                console.log("done");
+            }
+        } catch (error) {
+            // Handle the error
+            console.error('Error:', error);
+
+            // You can also show an error message to the user using Swal or another UI component
+            console.log("error");
+        }
+
     }
     return (
         <MainContainer>
@@ -134,18 +166,23 @@ const PetDetails = () => {
                     <div className='bg-zinc-300 text-3xl font-semibold rounded-lg text-center w-80 h-10'>
                         {PetCategory}
                     </div>
-
-
-                    {
-                        PetStatus == "Adopted" ?
-                            <button className='bg-zinc-300 mt-7  cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
-                                Already Adopted
+                    {PetStatus === "Adopted" ?
+                        <button className='bg-zinc-300 mt-7 cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
+                            Already Adopted
+                        </button>
+                        :
+                        (PetStatus === "Requested" ?
+                            <button className='bg-zinc-300 mt-7 cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
+                                Already Requested
                             </button>
                             :
-                            <button onClick={() => handleRequestPet(_id)} className='bg-zinc-300 mt-7  cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
+                            <button onClick={() => handleRequestPet(_id)} className='bg-zinc-300 mt-7 cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
                                 Request To Adopt
                             </button>
+                        )
                     }
+
+
 
 
 

@@ -2,8 +2,10 @@ import React from 'react';
 import MainTitle from '../../../Components/UseableComponents/Title/MainTitle';
 import { NavLink, Outlet } from 'react-router-dom';
 import DashboardTitle from '../../../Components/UseableComponents/DashboardTitle/DashboardTitle';
+import UseRequestedPets from '../../../Hooks/UseRequestedPets';
 
 const Dashboard = () => {
+    const [allRequestedPets, isLoading] = UseRequestedPets()
     return (
         <div>
             <div className='flex'>
@@ -38,6 +40,8 @@ const Dashboard = () => {
                                     isActive ? " no-underline  hover:bg-[#327451] text-[#C78646] rounded-md py-1 hover:text-white hover:px-2 transition-all duration-700 " : "no-underline hover:bg-[#327451]  rounded-md py-1 text-white hover:px-2 transition-all duration-700 "
                                 }>
                                     Requested Pets
+                                    ({allRequestedPets.length})
+
                                 </NavLink>
                             </li>
                             {/* <li>
@@ -68,6 +72,7 @@ const Dashboard = () => {
                 <div className='w-full min-h-screen bg-[#EBF1EE]'>
                     <div className='text-center'>
                         {/* <DashboardTitle dashtitle={"Welcome to Dashboard"}></DashboardTitle> */}
+                        {/* {allRequestedPets.length} */}
                     </div>
 
                     <Outlet></Outlet>

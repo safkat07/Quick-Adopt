@@ -21,6 +21,7 @@ import FavouritesPets from "../Layout/AllPages/FavouritesPets/FavouritesPets";
 import UpdatePet from "../Layout/AllPages/Dashboard/UpdatePet/UpdatePet";
 import PrivateRoute from "../Components/Providers/PrivateRoute/PrivateRoute";
 import RequestedPets from "../Layout/AllPages/Dashboard/RequestedPets/RequestedPets";
+import UserPetRequest from "../Layout/AllPages/UserPetRequest/UserPetRequest";
 
 
 const router = createBrowserRouter([
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: '/favourites',
         element: <FavouritesPets></FavouritesPets>
+      },
+      {
+        path: '/requested',
+        element: <UserPetRequest></UserPetRequest>
       },
       {
         path: '/userprofile',
