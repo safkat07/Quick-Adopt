@@ -82,7 +82,7 @@ const RequestedPets = () => {
                         :
                         <div>
                             {
-                                requestedPet?.length == 0 ? <MainTitle maintitle={"Please add some pet to Favourites"}></MainTitle>
+                                requestedPet?.length == 0 ? <MainTitle maintitle={"No Request Found"}></MainTitle>
                                     :
                                     <div className="overflow-x-auto font-maven">
                                         <table className="table ">

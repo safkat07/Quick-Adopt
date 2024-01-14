@@ -134,9 +134,21 @@ const PetDetails = () => {
                     <div className='bg-zinc-300 text-3xl font-semibold rounded-lg text-center w-80 h-10'>
                         {PetCategory}
                     </div>
-                    <button onClick={() => handleRequestPet(_id)} className='bg-zinc-300 mt-7 cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
-                        Request To Adopt
-                    </button>
+
+
+                    {
+                        PetStatus == "Adopted" ?
+                            <button className='bg-zinc-300 mt-7  cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
+                                Already Adopted
+                            </button>
+                            :
+                            <button onClick={() => handleRequestPet(_id)} className='bg-zinc-300 mt-7  cursor-pointer border-none text-2xl flex justify-center items-center font-semibold rounded-lg text-center w-80 h-12'>
+                                Request To Adopt
+                            </button>
+                    }
+
+
+
                     <div className='mt-10'>
                         <div className='w-80 h-64 shadow-xl border-4 bg-stone-200 rounded-md border-[#FDFDFE]'>
                             <div className='flex  flex-col justify-center items-center h-3/4 text-9xl'>
