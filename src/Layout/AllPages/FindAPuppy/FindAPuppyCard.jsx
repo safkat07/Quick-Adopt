@@ -79,7 +79,7 @@ const FindAPuppyCard = ({ PetName,
                 <div className='w-11/12 mx-auto'>
                     <p className='text-white text-xl bg-gray-500 w-1/6 text-center rounded-xl'>{PetCategory}</p>
                     <p className='font-maven text-3xl mt-2 uppercase'>{PetName}</p>
-                    <div className='flex md:text-2xl gap-2 w-full justify-start items-center'>
+                    <div className='flex text-2xl gap-2 w-full justify-start items-center'>
                         <IoLocationSharp></IoLocationSharp>
                         <p className='font-maven text-2xl '>{PetLocation}</p>
                     </div>
