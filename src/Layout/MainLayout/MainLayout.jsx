@@ -5,13 +5,13 @@ import Footer from '../AllPages/Footer/Footer';
 
 const MainLayout = () => {
     return (
-        <div>
+        <section>
             <Navbar></Navbar>
             <div className='min-h-[50vh]'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
-        </div>
+        </section>
     );
 };
 
