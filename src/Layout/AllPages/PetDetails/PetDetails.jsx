@@ -137,8 +137,8 @@ const PetDetails = () => {
     }
     return (
         <MainContainer>
-            <div className='flex font-maven justify-between     '>
-                <div className='w-1/2'>
+            <div className='flex md:flex-row flex-col justify-center font-maven md:justify-between     '>
+                <div className='md:w-1/2'>
                     <div>
                         <p className='text-white text-xl bg-gray-500 w-1/6 text-center rounded-xl'>{PetCategory}</p>
                         <p className='text-3xl mt-3'>{PetName} Puppy Available for free Adaption</p>
