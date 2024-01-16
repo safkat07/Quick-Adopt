@@ -42,14 +42,14 @@ const router = createBrowserRouter([
         // path: '/singlepetcategory/:id',
         path: '/singlepetcategory',
         element: <SinglePetCategory></SinglePetCategory>,
-        // loader: ({params}) => fetch(`http://localhost:5000/api/v1/allpetcategory/${params.id}`)
+        // loader: ({params}) => fetch(`https://quick-adopt-server-side.vercel.app/api/v1/allpetcategory/${params.id}`)
       },
       {
         path: '/petdetails/:id',
         element: <PrivateRoute>
           <PetDetails></PetDetails>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/allpets/${params.id}`)
+        loader: ({ params }) => fetch(`https://quick-adopt-server-side.vercel.app/api/v1/allpets/${params.id}`)
       },
       {
         path: '/findapuppy',
@@ -108,7 +108,7 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/updatepet/:id',
         element: <UpdatePet></UpdatePet>,
-        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/allpets/${params.id}`)
+        loader: ({ params }) => fetch(`https://quick-adopt-server-side.vercel.app/api/v1/allpets/${params.id}`)
 
       }
     ]
