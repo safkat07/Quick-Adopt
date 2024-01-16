@@ -7,14 +7,14 @@ import { MdOutlinePets } from "react-icons/md";
 const Services = () => {
     return (
         <MainContainer>
-            <div className='flex gap-y-10 justify-between flex-wrap  '>
+            <div className='flex px-10 md:gap-y-10 gap-y-5 justify-center gap-x-10 flex-wrap  '>
                 <div className='bg-[#EBF1EE] hover:p-5 transition-all duration-700 rounded-2xl flex justify-center items-center w-full lg:w-96 h-96'>
                     <div>
                         <div className='text-center text-3xl'>
                             <FaVanShuttle ></FaVanShuttle>
                         </div>
                         <p className='text-center font-maven font-semibold text-3xl'>24/7 Delivery</p>
-                        <p className='text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
+                        <p className='md:text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
                     </div>
                 </div>
                 <div className='bg-[#EBF1EE] hover:p-5 transition-all duration-700 flex rounded-2xl justify-center items-center w-full h-96 lg:w-96'>
@@ -23,7 +23,7 @@ const Services = () => {
                             <FaUserDoctor ></FaUserDoctor>
                         </div>
                         <p className='text-center font-maven font-semibold text-3xl'>Home Doctor</p>
-                        <p className='text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
+                        <p className='md:text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
                     </div>
                 </div>
                 <div className='bg-[#EBF1EE] hover:p-5 transition-all duration-700  rounded-2xl flex justify-center items-center w-full h-96 lg:w-96'>
@@ -32,10 +32,9 @@ const Services = () => {
                             <MdOutlinePets ></MdOutlinePets>
                         </div>
                         <p className='text-center font-maven font-semibold text-3xl'>Healthy Pet</p>
-                        <p className='text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
+                        <p className='md:text-lg pt-2 font-monster text-center '>24/7 pet delivery ensures your furry friends receive the utmost care and attention, any time of day or night. </p>
                     </div>
                 </div>
-
             </div>
         </MainContainer>
     );
