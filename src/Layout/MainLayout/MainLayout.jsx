@@ -10,7 +10,7 @@ const MainLayout = () => {
             <div className='min-h-[50vh]'>
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 };

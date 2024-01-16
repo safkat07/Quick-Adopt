@@ -10,7 +10,7 @@ const Banner = () => {
     };
 
     return (
-        <div className='bg-[#EBF1EE] md:px-20 min-h-[89vh]'>
+        <div className='bg-[#EBF1EE] md:px-20 min-h-[50vh] md:min-h-[89vh]'>
             <motion.div
 
                 className='flex lg:flex-row justify-between flex-col-reverse space-x-20   text-left items-center'>
@@ -35,14 +35,14 @@ const Banner = () => {
                             initial={{ x: -1000 }}
                             animate={{ x: 0 }}
                             transition={{ duration: 1 }}
-                            className='font-monster text-7xl'>
+                            className='font-monster text-3xl md:text-7xl'>
                             Trusted Pet Care
                         </motion.h2>
                         <motion.h2
                             initial={{ x: -950 }}
-                            animate={{ x: 100 }}
+                            animate={{ x: 70 }}
                             transition={{ duration: 3.5 }}
-                            className='font-monster pt-2 text-5xl'>
+                            className='font-monster pt-2 md:text-5xl'>
                             Dont buy, please adopt
                         </motion.h2>
                     </div>

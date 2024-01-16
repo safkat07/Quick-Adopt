@@ -24,14 +24,14 @@ const Home = () => {
                 </Helmet>
                 <Banner></Banner>
                 <PetCategory></PetCategory>
-                {/* {/* <FindPuppy></FindPuppy> */}
+                <FindPuppy></FindPuppy>
                 <WeLove></WeLove>
                 <CatsDogs></CatsDogs>
                 <WhyUs></WhyUs> 
-                {/* <OurBLog></OurBLog> */}
-                <MeetTeam></MeetTeam>
-                {/* <FAQsection></FAQsection> */}
-                <Services></Services>
+                 {/* <OurBLog></OurBLog> */}
+                 <MeetTeam></MeetTeam> 
+                {/* <FAQsection></FAQsection>  */}
+                 <Services></Services>  
                 
             </div>
         </HelmetProvider>
