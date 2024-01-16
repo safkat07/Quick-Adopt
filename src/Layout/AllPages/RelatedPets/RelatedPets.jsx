@@ -35,7 +35,7 @@ const RelatedPets = ({ PetCategory }) => {
                         <LoadingSpinner></LoadingSpinner>
                     </div>
                 ) : (
-                    <div className='grid grid-cols-1 lg:grid-cols-2'>
+                    <div className='flex flex-row flex-wrap'>
                         {relataedPetCategory?.map(petCat => (
                             <FindAPuppyCard key={petCat._id} {...petCat}></FindAPuppyCard>
                         ))}

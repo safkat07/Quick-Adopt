@@ -137,12 +137,12 @@ const PetDetails = () => {
     }
     return (
         <MainContainer>
-            <div className='flex md:flex-row flex-col justify-center font-maven md:justify-between     '>
-                <div className='md:w-1/2'>
+            <div className='flex px-10 xl:flex-row flex-col justify-center font-maven xl:justify-between     '>
+                <div className='xl:w-1/2 w-full'>
                     <div>
                         <p className='text-white text-xl bg-gray-500 w-1/6 text-center rounded-xl'>{PetCategory}</p>
                         <p className='text-3xl mt-3'>{PetName} Puppy Available for free Adaption</p>
-                        <div className='flex  text-xl mt-3 gap-2 w-full justify-start items-center'>
+                        <div className='flex  md:text-xl text-lg mt-3 gap-2 w-full justify-start items-center'>
                             <IoLocationSharp></IoLocationSharp>
                             <p className='font-maven text-xl '>{PetLocation}</p>
                         </div>
@@ -151,18 +151,18 @@ const PetDetails = () => {
                             <button onClick={handleAddtoFavourite} className=' text-2xl cursor-pointer flex items-center bg-transparent border-none'><FaRegHeart></FaRegHeart>Add to Favorites</button>
                         </div>
                         <img className='w-full mt-2 h-full' src={PetImage} alt="" />
-                        <div className='flex text-xl mt-2 justify-between'>
+                        <div className='flex md:text-xl text-lg mt-2 justify-between'>
                             <p><span className='font-black'>Gender:</span>{PetGender}</p>
                             <p><span className='font-black'>Age:</span>{PetAge}</p>
                         </div>
-                        <div className='flex text-xl mt-2 justify-between'>
+                        <div className='flex md:text-xl text-lg mt-2 justify-between'>
                             <p><span className='font-black'>Status:</span>{PetStatus}</p>
-                            <p><span className='font-black'>Pet Owner:</span>{PetOwnerName}</p>
+                            <p><span className='font-black '>Pet Owner:</span>{PetOwnerName}</p>
                         </div>
                     </div>
 
                 </div>
-                <div className='font-maven'>
+                <div className='font-maven pt-2 mx-auto'>
                     <div className='bg-zinc-300 text-3xl font-semibold rounded-lg text-center w-80 h-10'>
                         {PetCategory}
                     </div>
@@ -199,7 +199,7 @@ const PetDetails = () => {
                 </div>
             </div>
             <div className='mt-10'>
-                <p className='font-maven text-4xl font-semibold underline'>Related Pets</p>
+                <p className='font-maven md:text-4xl text-2xl font-semibold underline'>Related Pets</p>
                 <RelatedPets PetCategory={PetCategory}></RelatedPets>
             </div>
         </MainContainer>
