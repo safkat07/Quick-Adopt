@@ -66,7 +66,7 @@ const FindAPuppyCard = ({ PetName,
     }
     return (
         <MainContainer>
-            <div className='w-[500px] rounded-xl font-maven h-[600px] bg-[#EBF1EE]'>
+            <div className='md:w-[500px]  rounded-xl font-maven h-[600px] bg-[#EBF1EE]'>
                 <div className='relative h-1/2'>
                     <img className='w-full h-[95%]  rounded-t-xl' src={PetImage} alt="" />
                     {

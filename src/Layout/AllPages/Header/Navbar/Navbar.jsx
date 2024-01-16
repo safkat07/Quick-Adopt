@@ -58,7 +58,7 @@ const Navbar = () => {
                             <div className='lg:hidden  flex'>
                                 <ul className={open ? "list-none absolute bg-[#EBF1EE] w-full   top-20 pt-4 transition-all  duration-700  min-h-screen space-y-7 md:text-4xl text-3xl flex-row  text-right px-20  font-maven right-0 scroll-smooth  lg:flex gap-10"
                                     :
-                                    "list-none absolute md:text-4xl  min-h-screen top-20 transition-all inset-y-0 w-screen duration-1000 pt-4 right-0 transform -translate-x-full ease-in-out opacity-0  space-y-7 text-3xl flex-row text-right font-maven lg:flex gap-10"}
+                                    "list-none absolute md:text-4xl  min-h-screen top-20 transition-all inset-y-0 opacity-0 duration-1000 pt-4 right-0 transform -translate-x-full ease-in-out overflow-hidden  space-y-7 text-3xl flex-row text-right font-maven lg:flex gap-10"}
                                     onClick={() => setOpen(!open)}
                                 >
                                     <li><NavLink to='/' className={({ isActive, }) =>

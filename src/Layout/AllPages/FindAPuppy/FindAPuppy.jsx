@@ -16,7 +16,7 @@ const FindAPuppy = () => {
                         <LoadingSpinner></LoadingSpinner>
                     </div>
                         :
-                        <div className='grid grid-cols-3 justify-center items-center'>
+                        <div className='grid grid-cols-1  lg:grid-cols-3 justify-center items-center'>
                             {
                                 allPets?.map(allPet => <FindAPuppyCard key={allPet._id} {...allPet}></FindAPuppyCard>)
                             }
